@@ -1,0 +1,14 @@
+fastapi
+uvicorn
+python-dotenv
+google-api-python-client
+google-auth
+google-auth-httplib2
+google-auth-oauthlib
+PyMuPDF
+python-docx
+faiss-cpu
+google-generativeai
+pandas
+numpy
+PyPDF2

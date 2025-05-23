@@ -1,0 +1,11 @@
+INFO:     Will watch for changes in these directories: ['/Users/ricardoreis/Downloads/MBIA_Monorepo_Completo/backend']
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [57121] using StatReload
+INFO:     Started server process [57126]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:50356 - "GET /api/ask/conversas HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50619 - "GET /api/ask/conversas HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50623 - "GET /api/logs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50627 - "DELETE /api/ask/historico HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50631 - "GET /api/logs HTTP/1.1" 200 OK

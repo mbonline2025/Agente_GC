@@ -1,0 +1,146 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Tema Claro (padrão) */
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 0%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 0%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 0%;
+
+    --primary: 30 100% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 0 0% 93%;
+    --secondary-foreground: 0 0% 0%;
+
+    --muted: 0 0% 93%;
+    --muted-foreground: 0 0% 45%;
+
+    --accent: 30 100% 94%;
+    --accent-foreground: 0 0% 0%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 30 100% 50%;
+
+    --radius: 0.75rem;
+
+    --mb-orange: 30 100% 50%;
+    --mb-black: 0 0% 0%;
+    --mb-gray: 0 0% 45%;
+    --mb-light-gray: 0 0% 93%;
+  }
+
+  /* Tema Escuro */
+  .dark {
+    --background: 0 0% 6%;
+    --foreground: 0 0% 100%;
+
+    --card: 0 0% 10%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 0 0% 12%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 30 100% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 0 0% 20%;
+    --secondary-foreground: 0 0% 95%;
+
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 60%;
+
+    --accent: 30 100% 25%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 20%;
+    --input: 0 0% 25%;
+    --ring: 30 100% 45%;
+
+    --mb-orange: 30 100% 50%;
+    --mb-black: 0 0% 100%;
+    --mb-gray: 0 0% 70%;
+    --mb-light-gray: 0 0% 20%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Conversation styles */
+.message-container {
+  @apply w-full py-8 border-b border-border;
+}
+
+.message-container.user {
+  @apply bg-background;
+}
+
+.message-container.assistant {
+  @apply bg-white dark:bg-muted;
+}
+
+.message-content {
+  @apply max-w-3xl mx-auto px-4 md:px-0;
+}
+
+/* Chat input styles */
+.chat-input-container {
+  @apply fixed bottom-0 left-0 right-0 bg-white dark:bg-muted border-t border-border py-4 px-4;
+}
+
+.chat-input-content {
+  @apply max-w-3xl mx-auto relative;
+}
+
+/* File upload styles */
+.file-upload-area {
+  @apply border-2 border-dashed border-border rounded-xl p-8 text-center transition-colors hover:border-primary cursor-pointer bg-background;
+}
+
+.file-item {
+  @apply flex items-center gap-3 p-3 rounded-lg border border-border bg-white dark:bg-muted my-2;
+}
+
+/* Suggested questions styles */
+.suggested-questions {
+  @apply flex flex-wrap gap-2 mb-4;
+}
+
+.question-pill {
+  @apply px-3 py-1.5 text-sm bg-accent text-foreground rounded-full cursor-pointer hover:bg-primary hover:text-white transition-colors border border-border;
+}
+
+/* Document viewer styles */
+.document-item {
+  @apply border border-border rounded-lg p-4 mb-3 bg-white dark:bg-muted;
+}
+
+.document-header {
+  @apply flex items-center justify-between mb-2;
+}
+
+.document-text {
+  @apply text-sm text-muted-foreground mt-2 bg-muted p-3 rounded-md max-h-32 overflow-y-auto;
+}
